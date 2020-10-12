@@ -1,5 +1,9 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat-square)](LICENSE)
 
+# Fork Updates
+
+made compatible with latest tensorflow version
+
 # Devicehive Audio Analysis
 Audio classification feature demo\
 Detailed description can be found [here](https://www.iotforall.com/tensorflow-sound-classification-machine-learning-applications/)
@@ -7,12 +11,25 @@ Detailed description can be found [here](https://www.iotforall.com/tensorflow-so
 ## Installation
 * Get a copy of this repo
 * Install system packages
+
+linux
 ```bash
 sudo apt-get install libportaudio2 portaudio19-dev
 ```
+
+mac
+```bash
+brew install portaudio
+```
+
 * Install python requirements
 ```bash
 pip install -r requirements.txt
+```
+
+if you get an error installing pyaudio; do the following:
+```
+export ARCHFLAGS="-arch x86_64"; echo $ARCHFLAGS; pip3 install pyaudio
 ```
 
 * Download and extract saved models to source directory

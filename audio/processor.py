@@ -61,7 +61,7 @@ class WavProcessor(object):
     def _init_vggish(self):
         graph = tf.Graph()
         with graph.as_default():
-            sess = tf.Session()
+            sess = tf.compat.v1.Session()
             vggish.model.define_vggish_slim(training=False)
             vggish.model.load_vggish_slim_checkpoint(sess, params.VGGISH_MODEL)
 
@@ -70,7 +70,7 @@ class WavProcessor(object):
     def _init_youtube(self):
         graph = tf.Graph()
         with graph.as_default():
-            sess = tf.Session()
+            sess = tf.compat.v1.Session()
             youtube8m.model.load_model(sess, params.YOUTUBE_CHECKPOINT_FILE)
 
         self._youtube_sess = sess
