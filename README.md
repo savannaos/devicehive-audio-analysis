@@ -10,7 +10,27 @@ Detailed description can be found [here](https://www.iotforall.com/tensorflow-so
 
 ## Installation
 * Get a copy of this repo
+```
+git clone https://github.com/savannaos/devicehive-audio-analysis
+```
 * Install system packages
+
+linux
+```bash
+sudo apt-get install python3-pip
+```
+
+mac
+  - Install [brew](https://brew.sh)
+  - Install python 3 or later (check with `python3 --version` or `python --version`)
+  - If not: `brew install python`
+
+
+* Install python requirements
+```bash
+pip3 install -r requirements.txt
+```
+* Install [PortAudio](http://portaudio.com/docs/v19-doxydocs/tutorial_start.html)
 
 linux
 ```bash
@@ -22,21 +42,24 @@ mac
 brew install portaudio
 ```
 
-* Install python requirements
-```bash
-pip install -r requirements.txt
-```
-
-if you get an error installing pyaudio; do the following:
-```
-export ARCHFLAGS="-arch x86_64"; echo $ARCHFLAGS; pip3 install pyaudio
-```
-
 * Download and extract saved models to source directory
 ```bash
 wget https://s3.amazonaws.com/audioanalysis/models.tar.gz
 tar -xzf models.tar.gz
 ```
+
+
+if you are running on Windows: 
+- Install [conda for python dependencies](https://docs.conda.io/projects/conda/en/latest/user-guide/install/windows.html)
+- `conda install --file requirements.txt`
+- Install [PortAudio](http://portaudio.com/docs/v19-doxydocs/compile_windows.html
+
+
+if you get an error installing pyaudio; do the following:
+```
+export ARCHFLAGS="-arch x86_64"; echo $ARCHFLAGS; pip3 install pyaudio
+```
+Note: PortAudio is not required to run parse_file.py.
 
 ## Running
 #### To process prerecorded wav file
