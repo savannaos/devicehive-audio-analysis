@@ -9,11 +9,12 @@ Audio classification feature demo\
 Detailed description can be found [here](https://www.iotforall.com/tensorflow-sound-classification-machine-learning-applications/)
 
 ## Installation
-* Get a copy of this repo
+
+### Get a copy of this repo
 ```
 git clone https://github.com/savannaos/devicehive-audio-analysis
 ```
-* Install system packages
+### Install system packages
 
 linux
 ```bash
@@ -26,11 +27,11 @@ mac
   - If not: `brew install python`
 
 
-* Install python requirements
+### Install python requirements
 ```bash
 pip3 install -r requirements.txt
 ```
-* Install [PortAudio](http://portaudio.com/docs/v19-doxydocs/tutorial_start.html)
+### Install [PortAudio](http://portaudio.com/docs/v19-doxydocs/tutorial_start.html)
 
 linux
 ```bash
@@ -42,7 +43,7 @@ mac
 brew install portaudio
 ```
 
-* Download and extract saved models to source directory
+### Download and extract saved models to source directory
 ```bash
 wget https://s3.amazonaws.com/audioanalysis/models.tar.gz
 tar -xzf models.tar.gz
