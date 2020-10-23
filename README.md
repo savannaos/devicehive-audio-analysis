@@ -64,7 +64,7 @@ python daemon.py
 ```
 By default you can reach it on http://127.0.0.1:8000 \
 It will:
-* Capture data form your mic
+* Capture data from your mic
 * Process data
 * Send predictions to web interface
 * Send predictions to devicehive
