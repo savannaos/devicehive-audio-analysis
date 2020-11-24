@@ -1,10 +1,6 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat-square)](LICENSE)
 
-# Fork Updates
-
-made compatible with latest tensorflow version
-
-# Devicehive Audio Analysis
+# LearnML Audio Analysis
 Audio classification feature demo\
 Detailed description can be found [here](https://www.iotforall.com/tensorflow-sound-classification-machine-learning-applications/)
 
@@ -12,7 +8,7 @@ Detailed description can be found [here](https://www.iotforall.com/tensorflow-so
 
 ### Get a copy of this repo
 ```
-git clone https://github.com/savannaos/devicehive-audio-analysis
+git clone https://github.com/savannaos/learnml-audio-analysis
 ```
 ### Install system packages
 
@@ -49,7 +45,6 @@ wget https://s3.amazonaws.com/audioanalysis/models.tar.gz
 tar -xzf models.tar.gz
 ```
 
-
 if you are running on Windows: 
 - Install [conda for python dependencies](https://docs.conda.io/projects/conda/en/latest/user-guide/install/windows.html)
 - `conda install --file requirements.txt`
@@ -63,6 +58,21 @@ export ARCHFLAGS="-arch x86_64"; echo $ARCHFLAGS; pip3 install pyaudio
 Note: PortAudio is not required to run parse_file.py.
 
 ## Running
+
+#### To visualize a wav file
+
+fill in and run
+```bash
+python visualize.py
+```
+
+#### To practice training a model
+
+fill in and run
+```bash
+python train.py
+```
+
 #### To process prerecorded wav file
 run
 ```bash
